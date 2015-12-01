@@ -7,7 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage extends AbstractPage {
 
-//	@FindBy(linkText = "All special offers")
 	@FindBy(css = "a[href='/news/special_offers/']")
 	WebElement allSpecialOffersLink;
 	
