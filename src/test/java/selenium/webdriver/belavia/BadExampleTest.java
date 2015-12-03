@@ -1,4 +1,4 @@
-package selenium.webdriver.examples;
+package selenium.webdriver.belavia;
 
 import java.util.ArrayList;
 

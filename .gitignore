@@ -1,7 +1,6 @@
 .settings/
 bin/
 target/
-test/
 test-output/
 .classpath
 .project

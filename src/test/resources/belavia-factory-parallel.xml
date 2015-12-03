@@ -1,9 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Belaviat Suite" parallel="instances" data-provider-thread-count="2">
 
-	<test name="Basic Test">
+	<test name="Good Example Test (Factory)">
 		<classes>
-			<class name="selenium.webdriver.belavia.BasicTestFactory" />
+			<class name="selenium.webdriver.belavia.GoodExampleTestFactory" />
 		</classes>
 	</test>
 	

@@ -2,7 +2,7 @@
 <suite name="Firefox Test">
 	<test name="Firefox WebDriver Test">
 		<classes>
-			<class name="selenium.webdriver.google.Example" />
+			<class name="selenium.webdriver.google.ExampleTest" />
 		</classes>
 	</test>
 </suite>

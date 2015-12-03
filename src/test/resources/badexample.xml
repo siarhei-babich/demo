@@ -3,7 +3,7 @@
 
 	<test name="Bad Example Test">
 		<classes>
-			<class name="selenium.webdriver.examples.BadExampleTest" />
+			<class name="selenium.webdriver.belavia.BadExampleTest" />
 		</classes>
 	</test>
 	
