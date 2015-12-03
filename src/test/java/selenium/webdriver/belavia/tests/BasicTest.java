@@ -8,9 +8,9 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import selenium.webdriver.belavia.dto.Offer;
-import selenium.webdriver.belavia.pages.HomePage;
-import selenium.webdriver.belavia.pages.RegionalSettingsPage;
-import selenium.webdriver.belavia.pages.SpecialOffersPage;
+import selenium.webdriver.belavia.po.HomePage;
+import selenium.webdriver.belavia.po.RegionalSettingsPage;
+import selenium.webdriver.belavia.po.SpecialOffersPage;
 
 public class BasicTest extends UITest {
 	

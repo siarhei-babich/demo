@@ -5,7 +5,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import selenium.webdriver.belavia.pages.RegionalSettingsPage;
+import selenium.webdriver.belavia.po.RegionalSettingsPage;
 
 public class UITest {
 	
