@@ -18,6 +18,7 @@ public class RegionalSettingsPage extends AbstractPage {
 
 	public RegionalSettingsPage(WebDriver driver) {
 		super(driver);
+		PageFactory.initElements(this.driver, this);
 	}
 	
 	public RegionalSettingsPage setRegionalSettings(String language) {

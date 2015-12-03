@@ -1,4 +1,4 @@
-package selenium.webdriver.belavia.tests;
+package selenium.webdriver.belavia;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 
 import selenium.webdriver.belavia.po.RegionalSettingsPage;
 
-public class UITest {
+public class AbstractTest {
 	
 	WebDriver driver;
 	
