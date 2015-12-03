@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Belaviat Suite" parallel="tests" data-provider-thread-count="1">
+
+	<test name="Bad Example Test">
+		<classes>
+			<class name="selenium.webdriver.examples.BadExampleTest" />
+		</classes>
+	</test>
+	
+</suite>
