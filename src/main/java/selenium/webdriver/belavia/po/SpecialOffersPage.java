@@ -1,4 +1,4 @@
-package selenium.webdriver.belavia.pages;
+package selenium.webdriver.belavia.po;
 
 import java.util.ArrayList;
 import java.util.List;
