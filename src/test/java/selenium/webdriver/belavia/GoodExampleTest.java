@@ -10,6 +10,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
 
+import selenium.webdriver.AbstractTest;
 import selenium.webdriver.belavia.dto.Offer;
 import selenium.webdriver.belavia.po.HomePage;
 import selenium.webdriver.belavia.po.RegionalSettingsPage;
@@ -33,7 +34,7 @@ public class GoodExampleTest extends AbstractTest {
 	
 	@BeforeMethod(description = "WebDriver initialization")
 	public void prepare() {
-		driver = new FirefoxDriver();
+//		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.get(RegionalSettingsPage.BELAVIA_URL);
 	}
@@ -50,9 +51,9 @@ public class GoodExampleTest extends AbstractTest {
 		}
 	}
 	
-	@AfterMethod(description = "WebDriver claen up")
+/*	@AfterMethod(description = "WebDriver claen up")
 	public void cleanUp() {
 		driver.quit();				
-	}
+	}*/
 	
 }

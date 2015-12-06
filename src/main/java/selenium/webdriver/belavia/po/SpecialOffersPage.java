@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 
 import selenium.webdriver.belavia.dto.Offer;
+import selenium.webdriver.po.AbstractPage;
 
 public class SpecialOffersPage extends AbstractPage {
 	

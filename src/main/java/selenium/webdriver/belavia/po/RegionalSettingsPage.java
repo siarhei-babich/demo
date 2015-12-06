@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import selenium.webdriver.po.AbstractPage;
+
 public class RegionalSettingsPage extends AbstractPage {
 
 	public static final String BELAVIA_URL = "http://belavia.by/";
