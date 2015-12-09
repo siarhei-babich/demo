@@ -32,15 +32,15 @@ public class GoodExampleTest extends AbstractTest {
 		};
 	}
 	
-	@BeforeMethod(description = "WebDriver initialization")
+/*	@BeforeMethod(description = "WebDriver initialization")
 	public void prepare() {
-//		driver = new FirefoxDriver();
+		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get(RegionalSettingsPage.BELAVIA_URL);
-	}
+	}*/
 
 	@Test(description = "Special offers test")
 	public void specialOffersTest() {
+		driver.get(RegionalSettingsPage.BELAVIA_URL);
 		RegionalSettingsPage rsp = new RegionalSettingsPage(driver);
 		HomePage hp = rsp.setRegionalSettings(locale).openHomePage();
 		SpecialOffersPage sop = hp.openSpecialOffersPage();

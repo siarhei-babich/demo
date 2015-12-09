@@ -1,8 +1,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Firefox Test">
+
 	<test name="Firefox WebDriver Test">
 		<classes>
 			<class name="selenium.webdriver.google.ExampleTest" />
 		</classes>
 	</test>
+
 </suite>

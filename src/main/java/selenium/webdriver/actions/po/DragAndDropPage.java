@@ -1,10 +1,22 @@
 package selenium.webdriver.actions.po;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
-import org.openqa.selenium.By;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
@@ -15,51 +27,79 @@ import selenium.webdriver.po.AbstractPage;
 
 public class DragAndDropPage extends AbstractPage {
 
-	@FindBy(id="bin")
+	public final static String URL = "http://html5demos.com/drag#";
+
+	@FindBy(css = "#bin")
 	private WebElement bin;
-	
-	@FindBy(id="one")
+
+	@FindBy(css = "#one")
 	private WebElement one;
-	
-	@FindBy(id="two")
+
+	@FindBy(css = "#two")
 	private WebElement two;
-	
-	@FindBy(id="three")
+
+	@FindBy(css = "#three")
 	private WebElement three;
-	
-	@FindBy(id="four")
+
+	@FindBy(css = "#four")
 	private WebElement four;
-	
-	@FindBy(id="five")
+
+	@FindBy(css = "#five")
 	private WebElement five;
-	
-	@FindBy(css="[draggable]")
+
+	@FindBy(css = "[draggable]")
 	private List<WebElement> listOfDraggableWebElements;
-	
+
 	public DragAndDropPage(WebDriver driver) {
 		super(driver);
 	}
-	
-	@SuppressWarnings("deprecation")
-	public DragAndDropPage dragAndDropItemToBin(WebElement element) {
-		JavascriptExecutor js=(JavascriptExecutor) driver;
-		js.executeScript("arguments[0].style.border='5px groove red'", two, three);
-		js.executeScript("document.getElementById('five').remove()");
-		js.executeScript("document.getElementById('four').textContent='ten';");
-		Actions builder = new Actions(driver);
-		builder.clickAndHold(one).pause(1000).moveToElement(bin).pause(1000).release().build().perform();
+
+	public DragAndDropPage highlightElements(List<WebElement> listOfElementsElements) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		for (WebElement element : listOfElementsElements) {
+			js.executeScript("arguments[0].style.border='5px groove red'", element);
+		}
+
+		takeScreenshot(driver);
 		return this;
 	}
 	
-	public ArrayList<String> getExistingItems() {
-		ArrayList<String> listOfExisingItems = new ArrayList<String>();
+	public DragAndDropPage addTwentyText(List<WebElement> listOfElementsElements) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		for (WebElement element : listOfElementsElements) {
+			js.executeScript(String.format("arguments[0].textContent='%s'", "twenty"+element.getText()), element);
+		}
 		
-		return listOfExisingItems; 
-		
+		takeScreenshot(driver);
+//		js.executeScript("document.getElementById('four').textContent='ten';");
+		return this;
 	}
 	
+	public DragAndDropPage removeDraggableElements(List<WebElement> listOfElementsElements) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		for (WebElement element : listOfElementsElements) {
+			js.executeScript("arguments[0].remove()", element);
+		}
+
+		takeScreenshot(driver);
+//		js.executeScript("document.getElementById('five').remove()");
+		return this;
+	}
+
+	public ArrayList<String> getExistingItems() {
+		ArrayList<String> listOfExisingItems = new ArrayList<String>();
+
+		return listOfExisingItems;
+
+	}
+
 	public List<WebElement> getListOfDraggableWebElements() {
 		return listOfDraggableWebElements;
+	}
+
+	static String readFile(String path, Charset encoding) throws IOException {
+		byte[] encoded = Files.readAllBytes(Paths.get(path));
+		return new String(encoded, encoding);
 	}
 
 }

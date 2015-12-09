@@ -1,8 +1,0 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Actions">
-	<test name="Drag and Drop Test">
-		<classes>
-			<class name="selenium.webdriver.actions.DragAndDropTest" />
-		</classes>
-	</test>
-</suite>

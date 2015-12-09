@@ -1,27 +1,29 @@
-package selenium.webdriver.actions;
+package selenium.webdriver.jsexecutor;
 
+import java.awt.AWTException;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import selenium.webdriver.AbstractTest;
 import selenium.webdriver.actions.po.DragAndDropPage;
+import selenium.webdriver.jqueryui.po.DroppablePage;
 
-public class DragAndDropTest extends AbstractTest {
-	
-	public final static String URL = "http://html5demos.com/drag#";
+public class JSExecutorTest extends AbstractTest {
 	
 	List<WebElement> listOfDraggableWebElements;
 	
-	@Test
-	public void dragAndDropItemsToBin() {
-		driver.get(URL);
-		DragAndDropPage ddp = new DragAndDropPage(driver);
+	@Test()
+	public void jsExecutor() throws AWTException, InterruptedException {
+		DragAndDropPage ddp = (DragAndDropPage) new DragAndDropPage(driver).open(DragAndDropPage.URL);
 		List<WebElement> listOfDraggableWebElements;
 		listOfDraggableWebElements  = ddp.getListOfDraggableWebElements();
 		printNumberOfExisitngDraggableElements(listOfDraggableWebElements);
-		ddp.dragAndDropItemToBin(listOfDraggableWebElements.get(0));
+		ddp.highlightElements(listOfDraggableWebElements);
+		ddp.addTwentyText(listOfDraggableWebElements);
+		ddp.removeDraggableElements(listOfDraggableWebElements);
 		listOfDraggableWebElements  = ddp.getListOfDraggableWebElements();
 		printNumberOfExisitngDraggableElements(listOfDraggableWebElements);
 	}

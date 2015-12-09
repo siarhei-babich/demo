@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="JavaScript Executor">
+
+	<test name="JS Executor (html5demos)">
+		<classes>
+			<class name="selenium.webdriver.jsexecutor.JSExecutorTest">
+				<methods>
+					<include name="jsExecutor" />			
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>

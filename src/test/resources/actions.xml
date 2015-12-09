@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Actions">
+
+	<test name="Drag and Drop">
+		<classes>
+			<class name="selenium.webdriver.actions.ActionsTest">
+				<methods>
+					<include name="dragAndDrop" />			
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Move to Element">
+		<classes>
+			<class name="selenium.webdriver.actions.ActionsTest">
+				<methods>
+					<include name="moveToElement" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="Double Click">
+		<classes>
+			<class name="selenium.webdriver.actions.ActionsTest">
+				<methods>
+					<include name="doubleClick" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+</suite>
