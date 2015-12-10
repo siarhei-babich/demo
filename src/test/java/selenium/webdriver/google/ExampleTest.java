@@ -1,13 +1,9 @@
 package selenium.webdriver.google;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -21,14 +17,6 @@ public class ExampleTest {
 		// Notice that the remainder of the code relies on the interface,
 		// not the implementation.
 		WebDriver driver = new FirefoxDriver();
-		// WebDriver driver = new HtmlUnitDriver();
-		System.setProperty("webdriver.chrome.driver", "d:\\Downloads\\Chrome\\chromedriver_win32\\chromedriver.exe");
-		// System.setProperty("webdriver.ie.driver",
-		// "d:\\Downloads\\Chrome\\IEDriverServer_x64_2.48.0\\IEDriverServer.exe");
-		System.setProperty("webdriver.ie.driver",
-				"d:\\Downloads\\Chrome\\IEDriverServer_Win32_2.48.0\\IEDriverServer.exe");
-				// WebDriver driver = new ChromeDriver();
-				// WebDriver driver = new InternetExplorerDriver();
 
 		// And now use this to visit Google
 		driver.get("http://www.google.com");

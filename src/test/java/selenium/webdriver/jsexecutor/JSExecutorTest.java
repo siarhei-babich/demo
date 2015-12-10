@@ -4,12 +4,10 @@ import java.awt.AWTException;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import selenium.webdriver.AbstractTest;
-import selenium.webdriver.actions.po.DragAndDropPage;
-import selenium.webdriver.jqueryui.po.DroppablePage;
+import selenium.webdriver.jsexecutor.po.DragAndDropPage;
 
 public class JSExecutorTest extends AbstractTest {
 	

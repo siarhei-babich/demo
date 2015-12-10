@@ -1,4 +1,4 @@
-package selenium.webdriver.actions.po;
+package selenium.webdriver.jsexecutor.po;
 
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -71,7 +71,6 @@ public class DragAndDropPage extends AbstractPage {
 		}
 		
 		takeScreenshot(driver);
-//		js.executeScript("document.getElementById('four').textContent='ten';");
 		return this;
 	}
 	
@@ -82,7 +81,6 @@ public class DragAndDropPage extends AbstractPage {
 		}
 
 		takeScreenshot(driver);
-//		js.executeScript("document.getElementById('five').remove()");
 		return this;
 	}
 

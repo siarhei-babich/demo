@@ -2,10 +2,7 @@ package selenium.webdriver.belavia;
 
 import java.util.ArrayList;
 
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
@@ -31,12 +28,6 @@ public class GoodExampleTest extends AbstractTest {
 			{ "English" }, { "Deutsch" }, { "Русский" }
 		};
 	}
-	
-/*	@BeforeMethod(description = "WebDriver initialization")
-	public void prepare() {
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-	}*/
 
 	@Test(description = "Special offers test")
 	public void specialOffersTest() {
@@ -50,10 +41,5 @@ public class GoodExampleTest extends AbstractTest {
 			Assert.assertTrue(offer.getPrice() < 200, String.format("%s is a too expensive offer!", offer.toString()));
 		}
 	}
-	
-/*	@AfterMethod(description = "WebDriver claen up")
-	public void cleanUp() {
-		driver.quit();				
-	}*/
 	
 }
